@@ -1,11 +1,9 @@
+import sys
 
+# Lê linhas da entrada padrão
+lines = sys.stdin.readlines()
+data = [line.strip().split(',') for line in lines]
 
-file_path = "emd.csv"
-
-#Ler o Ficheiro
-with open(file_path, 'r') as file:
-    lines = file.readlines()
-    data = [line.strip().split(',') for line in lines]
 
 #Lista ordenada alfabeticamente pela modalidade
 header = data[0]
