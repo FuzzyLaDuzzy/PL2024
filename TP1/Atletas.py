@@ -16,7 +16,7 @@ print("\n")
 
 #Percentagem de Atletas Aptos e Inaptos
 header2 = data[0]
-federado_index = header2.index('federado')
+federado_index = header2.index('resultado')
 
 fit_count = sum(1 for row in data[1:] if row[federado_index] == 'true')
 unfit_count = sum(1 for row in data[1:] if row[federado_index] == 'false')
