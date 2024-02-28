@@ -101,7 +101,7 @@ else:
 ## Conversão de Código
 
 ```
-Substitui o caractere de crase ` por <code>.
+Substitui o caractere da frase ` por <code>.
 ```
 
 ```python
