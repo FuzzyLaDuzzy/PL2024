@@ -32,9 +32,9 @@ for line in markdown_lines:
 ```
 
 ## Conversão de Cabeçalhos
-
+```
 Verifica se a linha começa com um ou mais # e substitui pela tag HTML <h1>, <h2>, etc.
-
+```
 ```python
 for i in range(3, 0, -1):
     if line.startswith('#' * i):
@@ -42,10 +42,11 @@ for i in range(3, 0, -1):
 ```
 
 ## Conversão de Texto em Negrito e Itálico
-
+```
 Substitui ** por <b> e </b>.
 
 Substitui * por <i> e </i>.
+```
 
 ```python
 if '**' in line:
@@ -59,9 +60,11 @@ if '*' in line:
 
 ## Conversão de Listas Ordenadas
 
+```
 Verifica se a linha começa com um padrão de lista ordenada (número seguido de ponto).
 
 Adiciona tags HTML <ol>, <li> conforme necessário.
+```
 
 ```python
 if re.match(r'\d+\.', line):
@@ -77,10 +80,11 @@ else:
 
 ## Conversão de Listas Não Ordenadas
 
+```
 Verifica se a linha começa com - .
 
 Adiciona tags HTML <ul>, <li> conforme necessário.
-
+```
 
 ```python
 if line.startswith('- '):
@@ -96,7 +100,9 @@ else:
 
 ## Conversão de Código
 
+```
 Substitui o caractere de crase ` por <code>.
+```
 
 ```python
 if '`' in line:
@@ -106,7 +112,9 @@ if '`' in line:
 
 ## Conversão de Regras Horizontais
 
+```
 Substitui uma linha contendo apenas --- por <hr>.
+```
 
 ```python
 if line.strip() == '---':
