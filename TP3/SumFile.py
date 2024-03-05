@@ -1,16 +1,20 @@
+import sys
+import re
+
 def process_input():
     input_string = sys.stdin.read()
     total_sum = 0
     adding = False
 
-    for char in input_string:
-        if char == 'o':
+    for match in re.finditer(r'on|off|=|\d', input_string):
+        token = match.group()
+        if token == 'on':
             adding = True
-        elif char == '=' and adding:
-            print(total_sum)
-        elif char == 'f':
+        elif token == 'off':
             adding = False
-        elif adding and char.isdigit():
-            total_sum += int(char)
+        elif token == '=':
+            print("Sum is:", total_sum)
+        elif adding and token.isdigit():
+            total_sum += int(token)
 
 process_input()
