@@ -9,4 +9,4 @@ Este é um simples script em Python que realiza a soma de números a partir de u
 Certifique-se de ter o Python instalado em seu ambiente. Execute o script e forneça a entrada desejada. A saída mostrará a soma acumulada de acordo com as regras especificadas.
 
 ```bash
-python ferramenta_soma.py
+python Sum_File.py
