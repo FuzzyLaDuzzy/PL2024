@@ -64,12 +64,17 @@ while True:
             if id.type == 'NUMBER':
                 for item in data:
                     if item['id'] == id.value:
+                        if item['quantidade'] <= 0:
+                            print("Erro: Este item está fora de estoque.")
+                            break
                         total_price = item['preco_euros'] + item['preco_centimos'] / 100
                         if saldo < total_price:
                             print("Erro: Saldo insuficiente para comprar este item.")
                             break
                         saldo -= total_price
-                        print(f"Saldo : {saldo} euros")
+                        saldo = round(saldo,2)
+                        item['quantidade'] -= 1
+                        print(f"Saldo: {saldo} euros")
         elif token.type == 'SAIR':
             print(f"Troco : {saldo} euros")
             exit(0)
