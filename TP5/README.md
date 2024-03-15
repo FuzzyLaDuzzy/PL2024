@@ -22,11 +22,13 @@ ID: 1, Nome: água, Preço: 2 euros and 20 centimos, Quantidade: 10
 ID: 2, Nome: bolo, Preço: 1 euros and 60 centimos, Quantidade: 5
 ID: 3, Nome: iced tea, Preço: 3 euros and 20 centimos, Quantidade: 7
 Saldo: 0 euros
-Enter a command: MOEDA 5e 10c
-Adicionado 5.0 euros ao saldo. Saldo atual: 5.0 euros
-Adicionado 0.1 euros ao saldo. Saldo atual: 5.1 euros
+Enter a command: MOEDA 5e
+Adicionado 5 euros ao saldo. Saldo atual: 5 euros
 Enter a command: SELECIONAR 2
-Saldo: 3.5 euros
+Saldo: 3.4 euros
 Enter a command: SAIR
-Troco : 3.5 euros
+Troco :
+1 x 2e
+1 x 1e
+2 x 20c
 ```
