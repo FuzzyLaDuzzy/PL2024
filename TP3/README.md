@@ -2,11 +2,13 @@
 
 ## Ferramenta de Soma
 
-Este é um simples script em Python que realiza a soma de números a partir de uma entrada de texto, seguindo uma lógica específica. O script lê a entrada padrão (stdin) e processa os tokens presentes, acumulando a soma de acordo com as regras definidas.
+Este script recebe uma sequência de entrada através da entrada padrão (stdin). Ele processa a entrada, interpretando palavras-chave 'on', 'off', e '=', bem como números inteiros. A função process_input() lê a entrada, mantém um total acumulado e atualiza esse total dependendo das instruções 'on', 'off', e dos números fornecidos. Quando a instrução '=' é encontrada, o script imprime o total acumulado até o momento.
 
-## Uso
 
-Certifique-se de ter o Python instalado em seu ambiente. Execute o script e forneça a entrada desejada. A saída mostrará a soma acumulada de acordo com as regras especificadas.
+Exemplo de uso :
 
-```bash
-python Sum_File.py
+```
+echo "on 5 off 10 on 15 = 20" | python script.py
+
+```
+Aqui o terminal iria imprimir "Sum is: 20", que é o resultado da soma no momento que encontra o "=".
