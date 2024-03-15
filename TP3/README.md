@@ -9,6 +9,5 @@ Exemplo de uso :
 
 ```
 echo "on 5 off 10 on 15 = 20" | python script.py
-
 ```
 Aqui o terminal iria imprimir "Sum is: 20", que é o resultado da soma no momento que encontra o "=".
