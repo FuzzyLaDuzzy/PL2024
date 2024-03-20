@@ -12,8 +12,9 @@ tokens = [
 
 ignore = r'\s+'
 
+# Lexer function
 def lexer(sql_query):
-    token_regex = '|'.join('(?P<%s>%s)' 
+    token_regex = '|'.join('(?P<%s>%s)' % (name, pattern) if flags is None else '(?P<%s>%s)' % (name, pattern) for name, pattern, flags in tokens)
     ignore_regex = re.compile(ignore)
     for match in re.finditer(token_regex, sql_query):
         token_type = match.lastgroup
