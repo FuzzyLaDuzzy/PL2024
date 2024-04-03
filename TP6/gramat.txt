@@ -1,0 +1,21 @@
+
+T = {'?', '!', '(', ')', '=', '/', '*', '-', '+', var, num}
+N = {S, Expr, Expr2, Expr3, Op, Op2}
+S = S
+P = {
+    S -> '?' var            LA = {'?'}
+       | '!' Expr           LA = {'!'}
+       | var '=' Expr       LA = {var}
+    Expr -> Expr2 Op
+    Op -> '+' Expr          LA = {'+'}
+        | '-' Expr          LA = {'-'}
+        | &                 LA = {$, ')'}
+    
+    Expr2 -> Expr3 Op2      LA = {'(', var, num}
+    Op2 -> '*' Expr         LA = {'*'}
+         | '/' Expr         LA = {'/'}
+         | &                LA = {'+', '-', $, ')'}
+    Expr3 -> '(' Expr ')'   LA = {'('}
+           | var            LA = {var}
+           | num            LA = {num}
+}
